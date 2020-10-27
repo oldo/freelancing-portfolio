@@ -1,0 +1,20 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-800 text-lg;
+  }
+
+  a {
+    @apply font-semibold text-gray-600;
+  }
+
+  p {
+    @apply pb-4;
+  }
+}
