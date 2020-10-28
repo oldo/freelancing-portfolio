@@ -23,9 +23,9 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
       <p>
         I've always enjoyed messing around with computers from a very young age,
         but transitioned into a fulltime career in software development{' '}
-        <strong>over 4 years ago</strong> and since then I have been completely
-        immersed in startup land as one of the first team members and eventual
-        CTO of{' '}
+        <strong>almost 5 years ago</strong> and since then I have been
+        completely immersed in startup land as one of the first team members and
+        eventual CTO of{' '}
         <a
           href="https://www.bookinglayer.com"
           target="_blank"
@@ -54,7 +54,7 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
         <strong>aligned with the company’s product vision.</strong>
       </p>
 
-      <p className="mt-16">
+      <p className="mt-8">
         <strong>
           If you need some help with a project or product then{' '}
           <a

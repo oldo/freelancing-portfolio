@@ -8,6 +8,7 @@ const Profile: React.FC<ProfileProps> = ({}) => {
     'React and React Native wizard',
     'Extreme attention to detail',
     'Working on fullstack skills',
+    'Looking to work with you!',
   ];
 
   return (
@@ -22,11 +23,11 @@ const Profile: React.FC<ProfileProps> = ({}) => {
           }}
         />
         <div className="text-center lg:text-left lg:pl-8">
-          <div className="text-4xl leading-tight font-bold">
+          <div className="text-3xl lg:text-4xl leading-tight font-bold">
             Ollie Nicholson
           </div>
           <div className="flex flex-row items-center text-gray-600">
-            <div style={{ height: 24, width: 24 }}>
+            <div className="icon-drop-pin">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -39,7 +40,7 @@ const Profile: React.FC<ProfileProps> = ({}) => {
                 />
               </svg>
             </div>
-            <div className="pl-1 text-lg font-semibold">
+            <div className="pl-1 text-xs lg:text-lg font-semibold">
               Byron Bay, Australia (UTC/GMT+11)
             </div>
           </div>
@@ -47,27 +48,7 @@ const Profile: React.FC<ProfileProps> = ({}) => {
       </div>
 
       <div className="pt-16 mx-auto lg:pt-0 lg:mx-0">
-        {skills.map((skill) => (
-          <div key={skill} className="flex flex-row items-center">
-            <div style={{ height: 20, width: 20 }}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div className="text-xl pl-4">{skill}</div>
-          </div>
-        ))}
-      </div>
-
-      <div className="pt-16 mx-auto lg:pt-0 lg:mx-0">
+        <div className="text-lg font-bold pb-1">TL;DR</div>
         <ul>
           {skills.map((skill) => (
             <li key={`skill-${skill}`}>{skill}</li>

@@ -28,10 +28,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
       <div className="fixed bg-white w-full">
-        <div className="px-8 flex flex-row items-center h-8 justify-between">
+        <div className="px-4 lg:px-8 flex flex-row items-center h-12 justify-between">
           <Available />
 
-          <div className="mr-4 font-bold">
+          <div className="lg:mr-4 font-bold">
             <a
               href="mailto:oldo.nicho@gmail.com"
               target="_blank"
@@ -43,8 +43,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
         </div>
       </div>
-      <div className="min-h-screen w-full p-8">
-        <div className="h-full bg-gray-200">
+      <div className="min-h-screen w-full px-4 py-12 lg:px-8">
+        <div className="h-full bg-gray-200 rounded-lg">
           <div className="container px-8 pb-16 mx-auto">{children}</div>
         </div>
       </div>

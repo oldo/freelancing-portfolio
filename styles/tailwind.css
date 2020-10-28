@@ -4,7 +4,12 @@
 
 @layer base {
   body {
-    @apply text-gray-800 text-lg;
+    @apply text-gray-800 text-base;
+  }
+  @screen lg {
+    body {
+      @apply text-lg;
+    }
   }
 
   a {
@@ -34,5 +39,20 @@
     background-repeat: no-repeat;
     padding-left: 2em;
     vertical-align: -4px;
+  }
+
+  ul.arrow-list li:before {
+    background-image: url('/svg/arrow.svg');
+  }
+
+  .icon-drop-pin {
+    height: 14px;
+    width: 14px;
+  }
+  @screen lg {
+    .icon-drop-pin {
+      height: 24px;
+      width: 24px;
+    }
   }
 }

@@ -20,7 +20,7 @@ const Available: React.FC<AvailableProps> = ({}) => {
   return (
     <div className="flex flex-row items-center">
       <div
-        className={`${classes} transition-colors rounded-full ml-4`}
+        className={`${classes} transition-colors rounded-full lg:ml-4`}
         style={{ height: 15, width: 15 }}
       />
       <div className="pl-2 font-bold text-gray-600">AVAILABLE</div>
