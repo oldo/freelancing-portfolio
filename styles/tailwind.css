@@ -1,8 +1,5 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-/* purgecss end ignore */
-
 @tailwind utilities;
 
 @layer base {
@@ -16,5 +13,26 @@
 
   p {
     @apply pb-4;
+  }
+
+  ul {
+    text-indent: -2em;
+    margin-left: 2em;
+  }
+
+  li {
+    @apply pb-2;
+  }
+
+  li:before {
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url('/svg/check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 2em;
+    vertical-align: -4px;
   }
 }

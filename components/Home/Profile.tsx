@@ -66,6 +66,14 @@ const Profile: React.FC<ProfileProps> = ({}) => {
           </div>
         ))}
       </div>
+
+      <div className="pt-16 mx-auto lg:pt-0 lg:mx-0">
+        <ul>
+          {skills.map((skill) => (
+            <li key={`skill-${skill}`}>{skill}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

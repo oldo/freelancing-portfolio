@@ -8,6 +8,7 @@ const Backend: React.FC<BackendProps> = ({}) => {
   const title = 'Backend';
   const skills = [
     'Node',
+    'API endpoint design',
     'Express',
     'GraphQL',
     'Can provision and secure a server',
