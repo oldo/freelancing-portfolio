@@ -1,4 +1,5 @@
 import React from 'react';
+import ExternalLink from '../ExternalLink';
 
 import SectionHeader from '../SectionHeader';
 
@@ -16,32 +17,21 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
 
       <p>
         I have a <strong>passion for creating clean, efficient UI</strong> that
-        looks <strong>pixel perfect</strong> on all devices and am excited to
+        look <strong>pixel perfect</strong> on all devices and am excited to
         find a project to sink my teeth into.
       </p>
 
       <p>
-        I've always enjoyed messing around with computers from a very young age,
-        but transitioned into a fulltime career in software development{' '}
-        <strong>almost 5 years ago</strong> and since then I have been
-        completely immersed in startup land as one of the first team members and
-        eventual CTO of{' '}
-        <a
-          href="https://www.bookinglayer.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Bookinglayer
-        </a>{' '}
+        Since getting my first computer at the age of 6 (a Commodore 64 with
+        cassette tape data storage 🤘) I've always enjoyed using computers as a
+        tool to get stuff done, but I transitioned into a fulltime career in
+        software development <strong>over 4 years ago</strong> and since then I
+        have been completely immersed in startup land as one of the first team
+        members and eventual CTO of{' '}
+        <ExternalLink url="https://www.bookinglayer.com" text="Bookinglayer" />{' '}
         and then co-founder and CTO of{' '}
-        <a
-          href="https://www.usebookex.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Bookex
-        </a>{' '}
-        - both <strong>very complex web and mobile applications</strong> for
+        <ExternalLink url="https://www.usebookex.com" text="Bookex" /> - both{' '}
+        <strong>very complex web and mobile applications</strong> for
         accommodation and service providers to manage their inventory and
         reservations.
       </p>
@@ -57,14 +47,11 @@ const Introduction: React.FC<IntroductionProps> = ({}) => {
       <p className="mt-8">
         <strong>
           If you need some help with a project or product then{' '}
-          <a
-            href="mailto:oldo.nicho@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500"
-          >
-            I'd love to hear from you!
-          </a>
+          <ExternalLink
+            url="mailto:oldo.nicho@gmail.com"
+            text="I'd love to hear from you!"
+            highlight
+          />
         </strong>
       </p>
     </div>

@@ -26,10 +26,11 @@ const Facts: React.FC<FactsProps> = ({}) => {
 
   return (
     <div>
-      <SectionHeader title="Fun facts about me" />
+      <SectionHeader title="Random facts about me" />
+
       <ul className="arrow-list">
         {facts.map((fact) => (
-          <li>
+          <li key={fact.heading}>
             <span className="font-bold">{fact.heading}</span>
             <br />
             <span className="flex-grow-0">{fact.body}</span>
