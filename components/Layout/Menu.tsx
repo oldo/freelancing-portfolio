@@ -1,26 +1,56 @@
 import React from 'react';
-import Link from 'next/link'
+import cx from 'classnames';
 
-import { ImageSide } from '../../interfaces';
+import MenuItem from './MenuItem';
+import { ImageSide, Views } from '../../interfaces';
 
 interface MenuProps {
   imageSide: ImageSide;
+  activeView: Views;
+  handleSetActiveView: (view: Views) => void;
 }
 
-const Menu: React.FC<MenuProps> = ({ imageSide }) => {
-  let containerClasses = '';
-  if (imageSide === ImageSide.RIGHT) containerClasses = 'ml-24 left-0';
-  if (imageSide === ImageSide.LEFT) containerClasses = 'mr-24 right-0';
-  if (imageSide === ImageSide.NONE) containerClasses = 'right-1/2';
+const Menu: React.FC<MenuProps> = ({
+  imageSide,
+  activeView,
+  handleSetActiveView,
+}) => {
+  const containerClasses = cx({
+    ['ml-24 left-0']: imageSide === ImageSide.RIGHT,
+    ['mr-24 right-0']: imageSide === ImageSide.LEFT,
+    ['right-1/2']: imageSide === ImageSide.NONE,
+  });
 
-  const buttonClasses = 'p-8 text-2xl';
+  const items = [
+    {
+      view: Views.HOME,
+      label: 'Hello',
+    },
+    {
+      view: Views.ABOUT,
+      label: 'About',
+    },
+    {
+      view: Views.WORK,
+      label: 'Work',
+    },
+    {
+      view: Views.CONTACT,
+      label: 'Contact',
+    },
+  ];
 
   return (
-    <div className={`absolute bottom-0 pb-8 ${containerClasses}`}>
-      <Link href="/"><a className={buttonClasses}>Hello</a></Link>
-      <Link href="/about"><a className={buttonClasses}>About</a></Link>
-      <Link href="/work"><a className={buttonClasses}>Work</a></Link>
-      <Link href="/contact"><a className={buttonClasses}>Contact</a></Link>
+    <div className={`absolute bottom-0 mb-8 flex flew-row ${containerClasses}`}>
+      {items.map(({ view, label }) => (
+        <MenuItem
+          key={view}
+          view={view}
+          label={label}
+          activeView={activeView}
+          handleSetActiveView={handleSetActiveView}
+        />
+      ))}
     </div>
   );
 };

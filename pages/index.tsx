@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Layout from '../components/Layout/Layout';
 import Landing from '../components/Landing/Landing';
 
-import { ImageSide } from '../interfaces';
+import { ImageSide, Views } from '../interfaces';
 
 interface HomeProps {
   imageSide: ImageSide;
 }
 
-const Home: React.FC<HomeProps> = ({ imageSide = ImageSide.RIGHT }) => {
+const Home: React.FC<HomeProps> = () => {
+  const [imageSide, setImageSide] = useState(ImageSide.RIGHT);
+  const [activeView, setActiveView] = useState(Views.HOME);
+
+  console.log(imageSide, activeView);
+  
   return (
-    <Layout imageSide={imageSide}>
+    <Layout
+      activeView={activeView}
+      setActiveView={setActiveView}
+      imageSide={imageSide}
+      setImageSide={setImageSide}
+    >
       <Landing />
     </Layout>
   );

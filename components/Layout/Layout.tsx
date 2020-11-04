@@ -1,19 +1,41 @@
 import React from 'react';
-import { ImageSide } from '../../interfaces';
+import cx from 'classnames';
+import {
+  ImageSide,
+  SetActiveView,
+  SetImageSide,
+  Views,
+} from '../../interfaces';
+import { toggleImageSide } from '../../lib/imageSide';
 import { whiteDotGrid } from '../../styles/background-patterns';
 import Head from '../Head';
 import Face from './Face';
 import Menu from './Menu';
 
 interface LayoutProps {
+  activeView: Views;
+  setActiveView: SetActiveView;
   imageSide: ImageSide;
+  setImageSide: SetImageSide;
 }
 
-const Layout: React.FC<LayoutProps> = ({ imageSide, children }) => {
-  let containerClasses = '';
-  if (imageSide === ImageSide.RIGHT) containerClasses = 'ml-24 mr-auto';
-  if (imageSide === ImageSide.LEFT) containerClasses = 'mr-4 ml-auto';
-  if (imageSide === ImageSide.NONE) containerClasses = 'container mx-auto';
+const Layout: React.FC<LayoutProps> = ({
+  imageSide,
+  setImageSide,
+  activeView,
+  setActiveView,
+  children,
+}) => {
+  const handleSetActiveView = (view: Views) => {
+    setImageSide(toggleImageSide(imageSide));
+    setActiveView(view);
+  };
+
+  const containerClasses = cx({
+    ['ml-24 mr-auto']: imageSide === ImageSide.RIGHT,
+    ['mr-4 ml-auto']: imageSide === ImageSide.LEFT,
+    ['container mx-auto']: imageSide === ImageSide.NONE,
+  });
 
   return (
     <>
@@ -28,7 +50,12 @@ const Layout: React.FC<LayoutProps> = ({ imageSide, children }) => {
         </div>
 
         <Face imageSide={imageSide} />
-        <Menu imageSide={imageSide} />
+
+        <Menu
+          activeView={activeView}
+          handleSetActiveView={handleSetActiveView}
+          imageSide={imageSide}
+        />
       </div>
 
       <style jsx>{`

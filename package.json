@@ -8,6 +8,8 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.11",
+    "classnames": "^2.2.6",
     "next": "^10.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

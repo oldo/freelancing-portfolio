@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
-import theme from '../../lib/theme';
-import { topography } from '../../styles/background-patterns';
+import theme from '../../../lib/theme';
+import { topography } from '../../../styles/background-patterns';
 import Experiences from './Experiences';
 import SpecialisingIn from './SpecialisingIn';
 

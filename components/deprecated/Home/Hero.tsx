@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
-import { whiteDotGrid } from '../../styles/background-patterns';
+import { whiteDotGrid } from '../../../styles/background-patterns';
 
 interface HeroProps {}
 

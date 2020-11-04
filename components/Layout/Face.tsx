@@ -7,11 +7,6 @@ interface FaceProps {
 }
 
 const Face: React.FC<FaceProps> = ({ imageSide }) => {
-  const filepath =
-    imageSide === ImageSide.LEFT
-      ? '/ollie-face-left.png'
-      : '/ollie-face-right.png';
-
   const imageClasses = imageSide === ImageSide.LEFT ? 'left-0' : 'right-0';
 
   return (
@@ -19,7 +14,12 @@ const Face: React.FC<FaceProps> = ({ imageSide }) => {
       className={`absolute ${imageClasses}`}
       style={{ height: '100vh', width: 'calc(100vh / 2)' }}
     >
-      <Image src={filepath} alt="Ollie" layout="fill" />
+      {imageSide === ImageSide.LEFT && (
+        <Image src="/ollie-face-left.png" alt="Ollie" layout="fill" />
+      )}
+      {imageSide === ImageSide.RIGHT && (
+        <Image src="/ollie-face-right.png" alt="Ollie" layout="fill" />
+      )}
     </div>
   );
 };

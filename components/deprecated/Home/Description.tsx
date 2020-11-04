@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { whiteDotGrid } from '../../styles/background-patterns';
+import { whiteDotGrid } from '../../../styles/background-patterns';
 
 interface DescriptionProps {}
 
