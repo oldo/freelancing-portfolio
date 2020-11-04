@@ -12,8 +12,15 @@
     }
   }
 
+  p {
+    @apply text-gray-700;
+  }
+
   a {
     @apply font-semibold text-gray-600;
+  }
+  p strong {
+    @apply bg-accent-light text-gray-800 bg-opacity-75;
   }
 
   ul {
@@ -51,7 +58,7 @@
     @apply text-5xl;
   }
   #hero .subheading {
-    @apply text-gray-600 text-xl;
+    @apply text-gray-600 text-xl font-normal;
   }
 
   .icon-drop-pin {

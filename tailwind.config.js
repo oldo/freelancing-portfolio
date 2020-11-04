@@ -9,11 +9,16 @@ module.exports = {
   theme: {
     fontFamily: {
       // serif: ['"Playfair Display"', ...defaultTheme.fontFamily.serif],
-      sans: ['Biryani', ...defaultTheme.fontFamily.sans],
+      sans: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
+      headings: ['Source Sans Pro', ...defaultTheme.fontFamily.sans],
     },
     container: {
-      center: true,
+      // center: true,
       // padding: '1rem',
+    },
+    inset: {
+      ...defaultTheme.inset,
+      '1/2': '50%'
     },
     extend: {
       colors: {
