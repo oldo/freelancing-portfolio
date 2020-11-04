@@ -13,8 +13,6 @@ const Home: React.FC<HomeProps> = () => {
   const [imageSide, setImageSide] = useState(ImageSide.RIGHT);
   const [activeView, setActiveView] = useState(Views.HOME);
 
-  console.log(imageSide, activeView);
-  
   return (
     <Layout
       activeView={activeView}
