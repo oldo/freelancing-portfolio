@@ -16,10 +16,6 @@
     @apply font-semibold text-gray-600;
   }
 
-  p {
-    @apply pb-4;
-  }
-
   ul {
     text-indent: -2em;
     margin-left: 2em;
@@ -43,6 +39,19 @@
 
   ul.arrow-list li:before {
     background-image: url('/svg/arrow.svg');
+  }
+
+  #hero {
+    @apply font-black leading-loose text-gray-700;
+  }
+  #hero strong {
+    @apply bg-accent-light text-gray-800 bg-opacity-75;
+  }
+  #hero .heading {
+    @apply text-5xl;
+  }
+  #hero .subheading {
+    @apply text-gray-600 text-xl;
   }
 
   .icon-drop-pin {

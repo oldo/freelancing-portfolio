@@ -1,36 +1,21 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-import Profile from '../components/Home/Profile';
+import Header from '../components/Home/Hero';
 import Introduction from '../components/Home/Introduction';
-import Frontend from '../components/Home/Skills/Frontend';
-import Backend from '../components/Home/Skills/Backend';
-import Misc from '../components/Home/Skills/Misc';
-import Facts from '../components/Home/Facts';
-import Experience from '../components/Home/Experiences/Experiences';
-import Skills from '../components/Home/Skills';
+import Description from '../components/Home/Description';
+import { ImageSide } from '../interfaces';
 
-interface HomeProps {}
+interface HomeProps {
+  imageSide: ImageSide;
+}
 
-const Home: React.FC<HomeProps> = ({}) => {
-  const sections = [
-    <Profile />,
-    <Introduction />,
-    <Skills />,
-    <Experience />,
-    <Frontend />,
-    <Backend />,
-    <Misc />,
-    <Facts />,
-  ];
-
+const Home: React.FC<HomeProps> = ({ imageSide }) => {
   return (
-    <Layout>
-      {sections.map((section, index) => (
-        <div key={`section-${index}`} className="pt-16">
-          {section}
-        </div>
-      ))}
+    <Layout imageSide={imageSide}>
+      <Header />
+      <Introduction />
+      <Description />
     </Layout>
   );
 };
