@@ -11,18 +11,9 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = () => {
-  const [imageSide, setImageSide] = useState(ImageSide.NONE);
-  const [activeView, setActiveView] = useState(Views.WORK);
-
   return (
-    <Layout
-      activeView={activeView}
-      setActiveView={setActiveView}
-      imageSide={imageSide}
-      setImageSide={setImageSide}
-    >
-      {activeView === Views.HOME && <Landing />}
-      {activeView === Views.WORK && <Works />}
+    <Layout>
+      <Landing />
     </Layout>
   );
 };

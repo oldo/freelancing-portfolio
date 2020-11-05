@@ -86,7 +86,7 @@
 
   .works-container {
     @apply bg-white border rounded-lg;
-    min-height: 200px;
+    max-height: 300px;
   }
 
   .works-container.selected-works-container {

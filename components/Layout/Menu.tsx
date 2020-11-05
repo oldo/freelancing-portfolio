@@ -3,52 +3,41 @@ import cx from 'classnames';
 
 import MenuItem from './MenuItem';
 import { ImageSide, Views } from '../../interfaces';
+import { useRouter } from 'next/router';
 
-interface MenuProps {
-  imageSide: ImageSide;
-  activeView: Views;
-  handleSetActiveView: (view: Views) => void;
-}
+interface MenuProps {}
 
-const Menu: React.FC<MenuProps> = ({
-  imageSide,
-  activeView,
-  handleSetActiveView,
-}) => {
-  const containerClasses = cx({
-    ['ml-24 left-0']: imageSide === ImageSide.RIGHT,
-    ['mr-24 right-0']: imageSide === ImageSide.LEFT,
-    ['w-full justify-center']: imageSide === ImageSide.NONE,
-  });
+const Menu: React.FC<MenuProps> = ({}) => {
+  const router = useRouter();
+  const activeView = router.pathname;
 
   const items = [
     {
-      view: Views.HOME,
+      path: Views.HOME,
       label: 'Hello',
     },
     {
-      view: Views.ABOUT,
+      path: Views.ABOUT,
       label: 'About',
     },
     {
-      view: Views.WORK,
+      path: Views.WORK,
       label: 'Work',
     },
     {
-      view: Views.CONTACT,
+      path: Views.CONTACT,
       label: 'Contact',
     },
   ];
 
   return (
-    <div className={`absolute bottom-0 mb-8 flex flew-row ${containerClasses}`}>
-      {items.map(({ view, label }) => (
+    <div className={`absolute top-0 w-full mb-8 flex flew-row justify-center`}>
+      {items.map(({ path, label }) => (
         <MenuItem
-          key={view}
-          view={view}
+          key={path}
+          path={path}
           label={label}
-          activeView={activeView}
-          handleSetActiveView={handleSetActiveView}
+          isActive={activeView === path}
         />
       ))}
     </div>

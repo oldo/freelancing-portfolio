@@ -1,28 +1,23 @@
 import React from 'react';
 import cx from 'classnames';
+import Link from 'next/link';
 import { Views } from '../../interfaces';
 
 interface MenuItemProps {
-  view: Views;
+  path: Views;
   label: string;
-  activeView: Views,
-  handleSetActiveView: (view: Views) => void;
+  isActive: boolean;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({
-  view,
-  label,
-  activeView,
-  handleSetActiveView,
-}) => {
-  const buttonClasses = cx('p-4 mx-2 text-2xl cursor-pointer', {
-    'text-accent border-b-8 border-accent': view === activeView,
+const MenuItem: React.FC<MenuItemProps> = ({ path, label, isActive }) => {
+  const buttonClasses = cx('p-4 mx-2 text-2xl cursor-pointer font-black', {
+    'text-accent border-b-8 border-accent': isActive,
   });
 
   return (
-    <div onClick={() => handleSetActiveView(view)} className={buttonClasses}>
-      {label}
-    </div>
+    <Link href={path}>
+      <div className={buttonClasses}>{label}</div>
+    </Link>
   );
 };
 

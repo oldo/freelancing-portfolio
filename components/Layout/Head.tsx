@@ -1,7 +1,7 @@
 import React from 'react';
 import NextHead from 'next/head';
 
-import config from '../site.config';
+import config from '../../site.config';
 
 interface HeadProps {
   title?: string;
