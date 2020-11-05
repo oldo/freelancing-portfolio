@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
+import cx from 'classnames';
 import { ImageSide } from '../../interfaces';
 
 interface FaceProps {
@@ -7,7 +8,10 @@ interface FaceProps {
 }
 
 const Face: React.FC<FaceProps> = ({ imageSide }) => {
-  const imageClasses = imageSide === ImageSide.LEFT ? 'left-0' : 'right-0';
+  const imageClasses = cx({
+    ['left-0']: imageSide === ImageSide.LEFT,
+    ['right-0']: imageSide === ImageSide.RIGHT,
+  });
 
   return (
     <div

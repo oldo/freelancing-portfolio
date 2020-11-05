@@ -71,4 +71,26 @@
       width: 24px;
     }
   }
+
+  .overlay {
+    @apply z-10 fixed top-0 bottom-0 w-full;
+    background: rgba(0, 0, 0, 0.8);
+    will-change: opacity;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .modal-container {
+    @apply fixed top-0 left-0 w-screen h-screen z-10 flex;
+  }
+
+  .works-container {
+    @apply bg-white border rounded-lg;
+    min-height: 200px;
+  }
+
+  .works-container.selected-works-container {
+    @apply m-auto;
+    max-height: 90vh;
+  }
 }

@@ -49,7 +49,7 @@ const Layout: React.FC<LayoutProps> = ({
           {children}
         </div>
 
-        <Face imageSide={imageSide} />
+        {/* <Face imageSide={imageSide} /> */}
 
         <Menu
           activeView={activeView}

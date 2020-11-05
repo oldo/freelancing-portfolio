@@ -18,7 +18,7 @@ const Menu: React.FC<MenuProps> = ({
   const containerClasses = cx({
     ['ml-24 left-0']: imageSide === ImageSide.RIGHT,
     ['mr-24 right-0']: imageSide === ImageSide.LEFT,
-    ['right-1/2']: imageSide === ImageSide.NONE,
+    ['w-full justify-center']: imageSide === ImageSide.NONE,
   });
 
   const items = [
