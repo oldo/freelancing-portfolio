@@ -1,8 +1,7 @@
 import React from 'react';
-import cx from 'classnames';
 
 import MenuItem from './MenuItem';
-import { ImageSide, Views } from '../../interfaces';
+import { Views } from '../../interfaces';
 import { useRouter } from 'next/router';
 
 interface MenuProps {}
@@ -27,6 +26,7 @@ const Menu: React.FC<MenuProps> = ({}) => {
     {
       path: Views.CONTACT,
       label: 'Contact',
+      externalLink: 'mailto:oldo.nicho@gmail.com'
     },
   ];
 

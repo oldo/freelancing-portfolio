@@ -17,7 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <>
       <Head />
 
-      <div className="bg-pattern min-h-screen w-full">
+      <div className="bg-pattern min-h-screen w-full overflow-hidden">
         <Menu />
         {children}
       </div>

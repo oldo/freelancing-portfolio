@@ -1,5 +1,6 @@
 export const items = [
   {
+    id: 'booking-engine',
     title: 'Booking Engine',
     subtitle: 'A radical booking experience',
     images: [
@@ -15,6 +16,7 @@ Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit
     `,
   },
   {
+    id: 'item-2',
     title: 'Parturient Pellentesque Malesuada',
     subtitle: 'Donec id elit non mi porta gravida at eget metus.',
     images: [
@@ -30,6 +32,7 @@ Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada 
     `,
   },
   {
+    id: 'item-3',
     title: 'Elit Cras',
     subtitle:
       'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.',
@@ -46,6 +49,7 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
     `,
   },
   {
+    id: 'item-4',
     title: 'Ipsum Vestibulum Aenean',
     subtitle: 'Curabitur blandit tempus porttitor.',
     images: [
@@ -63,6 +67,7 @@ Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metu
 ];
 
 export interface Item {
+  id: string;
   title: string;
   subtitle: string;
   description: string;

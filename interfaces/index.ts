@@ -1,7 +1,7 @@
 export enum Views {
   HOME = '/',
   ABOUT = '/about',
-  WORK = '/work',
+  WORK = '/works',
   CONTACT = '/contact',
 }
 export type SetActiveView = (view: Views) => void;
