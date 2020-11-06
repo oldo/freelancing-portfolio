@@ -17,7 +17,7 @@
   }
 
   strong {
-    @apply bg-accent-light text-gray-800 bg-opacity-75;
+    @apply text-gray-800;
   }
 
   a {

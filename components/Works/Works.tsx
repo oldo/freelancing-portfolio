@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { items } from './items';
 import SelectedWork from './SelectedWork';
 import Work from './Work';
+import { motion } from 'framer-motion';
 
 interface WorksProps {}
 
@@ -14,11 +15,13 @@ const Works: React.FC<WorksProps> = ({}) => {
 
   return (
     <>
-      <div className="container mx-auto py-32 grid grid-cols-2 gap-4 hide-scrollbars">
+      <motion.div
+        className="container mx-auto py-32 grid grid-cols-1 md:grid-cols-2 gap-8 hide-scrollbars"
+      >
         {items.map((item) => (
           <Work key={`item-${item.id}`} item={item} />
         ))}
-      </div>
+      </motion.div>
 
       {selectedWork && <SelectedWork item={selectedWork} />}
     </>

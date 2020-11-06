@@ -18,12 +18,9 @@ const Face: React.FC<FaceProps> = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.8, ease: 'easeOut' } }}
-        transition={{ duration: 1, ease: 'easeInOut' }}
+        layoutId="myFace"
         className={`fixed bottom-0`}
         style={style}
-        layoutId="myFace"
       >
         <Image src="/ollie-large.png" alt="Ollie" layout="fill" priority />
       </motion.div>

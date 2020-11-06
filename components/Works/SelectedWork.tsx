@@ -1,25 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Item } from './items';
-import variants from '../Introduction/variants';
+import variants from '../../lib/variants';
+import { useRouter } from 'next/router';
 
 interface SelectedWorkProps {
   item: Item;
 }
 
 const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
+  const router = useRouter();
+
   return (
     <>
-      <Link href="/works">
+      <AnimatePresence>
         <motion.div
+          onClick={() => router.push('/works')}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.15 } }}
+          exit={{ opacity: 0, transition: { duration: 1 } }}
           transition={{ duration: 0.2 }}
           className="overlay"
         />
-      </Link>
+      </AnimatePresence>
 
       <div className="fixed top-0 left-0 w-screen h-screen z-10 flex pointer-events-none">
         <motion.div
@@ -37,23 +41,16 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
               </motion.div>
               <motion.div
                 layoutId={`work-subtitle-${item.id}`}
-                className="text-gray-600 italic pb-8"
+                className="text-gray-600 italic"
               >
                 {item.subtitle}
               </motion.div>
-              <motion.p
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                className="max-w-4xl text-gray-600"
-              >
-                {item.description}
-              </motion.p>
             </div>
 
             <div className="grid grid-cols-2 gap-8 pb-12">
               {item.images.map((image, i) => (
                 <motion.img
+                  key={`image-${item.id}-${i}`}
                   initial="hidden"
                   animate="visible"
                   variants={variants}
@@ -63,6 +60,15 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
                 />
               ))}
             </div>
+
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              className="max-w-4xl"
+            >
+              {item.description}
+            </motion.p>
           </div>
         </motion.div>
       </div>

@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Heading from './Heading';
 import Subheading from './Subheading';
-import variants from './variants';
+import variants from '../../lib/variants';
 
 interface AboutProps {}
 
 const About: React.FC<AboutProps> = ({}) => {
   return (
     <div className="container mx-auto pt-32">
-      <div className="text-4xl leading-tight pb-12 font-black text-gray-800 flex flex-row justify-between">
+      <div className="text-4xl leading-tight pb-12 font-black text-gray-800">
         <Heading />
       </div>
 
