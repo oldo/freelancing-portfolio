@@ -11,14 +11,17 @@ interface MenuItemProps {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ path, label, isActive }) => {
-  const buttonClasses = cx('p-4 mx-2 text-2xl cursor-pointer font-black', {
-    'text-gray-500': !isActive,
+  const buttonClasses = cx('p-4 mx-2 text-2xl cursor-pointer font-black transition-color duration-500', {
+    'text-gray-500 hover:text-gray-800': !isActive,
     'text-gray-800': isActive,
   });
 
   return (
     <Link href={path}>
-      <a className={buttonClasses}>
+      <a
+        target={`${path[0] === '/' ? '' : '_blank'}`}
+        className={buttonClasses}
+      >
         {label}
         {isActive && (
           <motion.div

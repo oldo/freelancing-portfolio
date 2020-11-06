@@ -2,6 +2,6 @@ export enum Views {
   HOME = '/',
   ABOUT = '/about',
   WORK = '/works',
-  CONTACT = '/contact',
+  CONTACT = 'mailto:oldo.nicho@gmail.com',
 }
 export type SetActiveView = (view: Views) => void;

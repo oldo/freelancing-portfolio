@@ -13,7 +13,7 @@ const Work: React.FC<WorkProps> = ({ item }) => {
     <Link href={`/works/${item.id}`}>
       <a>
         <motion.div
-          className="bg-white border rounded-lg relative cursor-pointer"
+          className="bg-white rounded-lg relative cursor-pointer"
           layoutId={`work-container-${item.id}`}
         >
           <motion.img

@@ -8,7 +8,7 @@ const Heading: React.FC<HeadingProps> = ({}) => {
     <>
       <motion.div layoutId="heading2">CLEAN</motion.div>
       <motion.div layoutId="heading3">EFFICIENT</motion.div>
-      <motion.div layoutId="heading4">PIXEL PERFECT UI</motion.div>
+      <motion.div layoutId="heading4">PIXEL PERFECT</motion.div>
     </>
   );
 };

@@ -11,7 +11,7 @@ const Face: React.FC<FaceProps> = () => {
   const style = {
     height: router.pathname === '/' ? '100vh' : '80vh',
     width: router.pathname === '/' ? '100vh' : '80vh',
-    right: router.pathname === '/' ? '-30vh' : '-40vh',
+    right: router.pathname === '/' ? '-25vh' : '-40vh',
   };
 
   // @TODO ken burns effect
