@@ -5,10 +5,3 @@ export enum Views {
   CONTACT = '/contact',
 }
 export type SetActiveView = (view: Views) => void;
-
-export enum ImageSide {
-  LEFT,
-  RIGHT,
-  NONE,
-}
-export type SetImageSide = (imageSide: ImageSide) => void;

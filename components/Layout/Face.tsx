@@ -1,23 +1,33 @@
 import React from 'react';
 import Image from 'next/image';
-import { ImageSide } from '../../interfaces';
+import { useRouter } from 'next/router';
+import { AnimatePresence, motion } from 'framer-motion';
 
-interface FaceProps {
-  imageSide: ImageSide;
-}
+interface FaceProps {}
 
-const Face: React.FC<FaceProps> = ({ imageSide }) => {
+const Face: React.FC<FaceProps> = () => {
+  const router = useRouter();
+
   const style = {
-    height: '100vh',
-    width: '100vh',
-    right: imageSide === ImageSide.RIGHT ? '-40vh' : '',
-    left: imageSide === ImageSide.LEFT ? 'calc(-100vh / 2)' : '',
+    height: router.pathname === '/' ? '100vh' : '80vh',
+    width: router.pathname === '/' ? '100vh' : '80vh',
+    right: router.pathname === '/' ? '-30vh' : '-40vh',
   };
 
+  // @TODO ken burns effect
   return (
-    <div className={`fixed top-0`} style={style}>
-      <Image src="/ollie-large.png" alt="Ollie" layout="fill" />
-    </div>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.8, ease: 'easeOut' } }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+        className={`fixed bottom-0`}
+        style={style}
+        layoutId="myFace"
+      >
+        <Image src="/ollie-large.png" alt="Ollie" layout="fill" priority />
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

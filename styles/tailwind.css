@@ -4,72 +4,24 @@
 
 @layer base {
   body {
-    @apply text-gray-800 text-base;
+    @apply text-gray-700 text-base font-semibold;
   }
   @screen lg {
     body {
-      @apply text-lg;
+      @apply text-xl;
     }
   }
 
   p {
-    @apply text-gray-700;
+    @apply leading-loose pb-4;
+  }
+  
+  strong {
+    @apply bg-accent-light text-gray-800 bg-opacity-75;
   }
 
   a {
     @apply font-semibold text-gray-600;
-  }
-  p strong {
-    @apply bg-accent-light text-gray-800 bg-opacity-75;
-  }
-
-  ul {
-    text-indent: -2em;
-    margin-left: 2em;
-  }
-
-  li {
-    @apply pb-2;
-  }
-
-  li:before {
-    content: '';
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    background-image: url('/svg/check.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-left: 2em;
-    vertical-align: -4px;
-  }
-
-  ul.arrow-list li:before {
-    background-image: url('/svg/arrow.svg');
-  }
-
-  #hero {
-    @apply font-black leading-loose text-gray-700;
-  }
-  #hero strong {
-    @apply bg-accent-light text-gray-800 bg-opacity-75;
-  }
-  #hero .heading {
-    @apply text-5xl;
-  }
-  #hero .subheading {
-    @apply text-gray-600 text-xl font-normal;
-  }
-
-  .icon-drop-pin {
-    height: 14px;
-    width: 14px;
-  }
-  @screen lg {
-    .icon-drop-pin {
-      height: 24px;
-      width: 24px;
-    }
   }
 
   .overlay {

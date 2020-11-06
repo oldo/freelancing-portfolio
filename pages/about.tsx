@@ -1,19 +1,19 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
+import About from '../components/Introduction/About';
+import Heading from '../components/Introduction/Heading';
+import Subheading from '../components/Introduction/Subheading';
 import Face from '../components/Layout/Face';
 import Layout from '../components/Layout/Layout';
-import { ImageSide } from '../interfaces';
 
-interface AboutProps {}
+interface AboutContainerProps {}
 
-const About: React.FC<AboutProps> = ({}) => {
+const AboutContainer: React.FC<AboutContainerProps> = ({}) => {
   return (
     <Layout>
-      <div className="h-screen flex flex-col justify-center container" style={{ marginLeft: '30vw' }}>
-        <div>Content</div>
-      </div>
-      {/* <Face imageSide={ImageSide.RIGHT} /> */}
+      <About />
     </Layout>
   );
 };
 
-export default About;
+export default AboutContainer;
