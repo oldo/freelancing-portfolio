@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import Face from '../Layout/Face';
 import Heading from './Heading';
 import Subheading from './Subheading';
 
@@ -16,6 +17,8 @@ const Landing: React.FC<LandingProps> = ({}) => {
       </div>
 
       <Subheading />
+
+      <Face />
     </motion.div>
   );
 };

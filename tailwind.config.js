@@ -14,7 +14,7 @@ module.exports = {
     },
     container: {
       // center: true,
-      // padding: '1rem',
+      padding: '1rem',
     },
     inset: {
       ...defaultTheme.inset,

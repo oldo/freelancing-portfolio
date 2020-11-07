@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Subheading from './Subheading';
 import Summary from './Summary';
+import Face from '../Layout/Face';
 import variants from '../../lib/variants';
 import AboutData from './about.mdx';
 
@@ -13,12 +14,15 @@ const About: React.FC<AboutProps> = ({}) => {
       <div className="pb-12">
         <Subheading />
       </div>
+
       <motion.div variants={variants} initial="hidden" animate="visible">
         <div className="max-w-5xl">
           <Summary />
           <AboutData />
         </div>
       </motion.div>
+
+      <Face />
     </div>
   );
 };
