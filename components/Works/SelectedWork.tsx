@@ -1,9 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Item } from './items';
 import variants from '../../lib/variants';
-import { useRouter } from 'next/router';
 
 interface SelectedWorkProps {
   item: Item;

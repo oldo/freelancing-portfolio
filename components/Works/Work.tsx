@@ -1,7 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Item } from './items';
-import Link from 'next/link';
 
 interface WorkProps {
   item: Item;

@@ -1,8 +1,8 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 import MenuItem from './MenuItem';
 import { Views } from '../../typescript/enums';
-import { useRouter } from 'next/router';
 
 interface MenuProps {}
 

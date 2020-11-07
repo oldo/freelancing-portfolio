@@ -1,10 +1,10 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
 import { items } from './items';
-import SelectedWork from './SelectedWork';
 import Work from './Work';
-import { motion } from 'framer-motion';
+import SelectedWork from './SelectedWork';
 
 interface WorksProps {}
 

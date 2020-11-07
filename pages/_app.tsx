@@ -3,27 +3,11 @@ import { useRouter } from 'next/router';
 import { MDXProvider } from '@mdx-js/react';
 import { AnimateSharedLayout } from 'framer-motion';
 
+import MDXComponents from '../components/MDX';
 import '../styles/tailwind.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-
-  const MDXComponents = {
-    a: (props: any) => (
-      <a
-        {...props}
-        className="font-semibold text-gray-800 border-b-2 border-accent transition-colors duration-300"
-        target="_blank"
-        rel="noopener"
-      />
-    ),
-    strong: (props: any) => (
-      <strong
-        {...props}
-        className="font-bold text-gray-800"
-      />
-    ),
-  };
 
   return (
     <MDXProvider components={MDXComponents}>

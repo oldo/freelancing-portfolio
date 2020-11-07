@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Subheading from './Subheading';
+import Summary from './Summary';
 import variants from '../../lib/variants';
 import AboutData from './about.mdx';
-import Summary from './Summary';
 
 interface AboutProps {}
 

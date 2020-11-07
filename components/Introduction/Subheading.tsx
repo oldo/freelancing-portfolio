@@ -1,9 +1,9 @@
 import React from 'react';
-import cx from 'classnames';
+import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
+import cx from 'classnames';
 import variants from '../../lib/variants';
 import { Views } from '../../typescript/enums';
-import { useRouter } from 'next/router';
 
 interface SubheadingProps {}
 

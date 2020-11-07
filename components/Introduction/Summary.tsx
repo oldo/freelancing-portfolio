@@ -2,7 +2,6 @@ import React from 'react';
 
 import HomeIcon from '../Icons/Home';
 import AcademicIcon from '../Icons/Academic';
-import LocationIcon from '../Icons/Location';
 import BriefcaseIcon from '../Icons/Briefcase';
 
 interface SummaryProps {}

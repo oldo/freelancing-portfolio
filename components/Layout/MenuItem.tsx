@@ -1,8 +1,8 @@
 import React from 'react';
-import cx from 'classnames';
 import Link from 'next/link';
-import { Views } from '../../typescript/enums';
+import cx from 'classnames';
 import { motion } from 'framer-motion';
+import { Views } from '../../typescript/enums';
 
 interface MenuItemProps {
   path: Views;

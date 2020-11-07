@@ -7,9 +7,30 @@ interface HeadingProps {}
 const Heading: React.FC<HeadingProps> = ({}) => {
   return (
     <>
-      <motion.div variants={variants} initial="hidden" animate="visible" layoutId="heading2">CLEAN</motion.div>
-      <motion.div variants={variants} initial="hidden" animate="visible" layoutId="heading3">EFFICIENT</motion.div>
-      <motion.div variants={variants} initial="hidden" animate="visible" layoutId="heading4">PIXEL PERFECT</motion.div>
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        layoutId="heading2"
+      >
+        CLEAN
+      </motion.div>
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        layoutId="heading3"
+      >
+        EFFICIENT
+      </motion.div>
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        layoutId="heading4"
+      >
+        PIXEL PERFECT
+      </motion.div>
     </>
   );
 };
