@@ -3,7 +3,7 @@ import { whiteDotGrid } from '../../styles/background-patterns';
 import Menu from './Menu';
 import Head from './Head';
 import Face from './Face';
-import { Views } from '../../interfaces';
+import { Views } from '../../typescript/enums';
 import { useRouter } from 'next/router';
 
 interface LayoutProps {}

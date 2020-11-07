@@ -8,9 +8,9 @@ const Subheading: React.FC<SubheadingProps> = ({}) => {
   return (
     <motion.div
       layoutId="subheading1"
-      // initial="hidden"
-      // animate="visible"
-      // variants={variants}
+      initial="hidden"
+      animate="visible"
+      variants={variants}
       className="text-2xl font-extrabold"
     >
       <div>

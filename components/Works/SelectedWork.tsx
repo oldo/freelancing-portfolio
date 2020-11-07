@@ -31,6 +31,25 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
           className="relative m-auto bg-white rounded-lg border pointer-events-auto overflow-y-auto hide-scrollbars"
           style={{ maxHeight: '90vh' }}
         >
+          <div
+            onClick={() => router.push('/works')}
+            className="absolute cursor-pointer text-gray-500 hover:text-gray-700 transition-color duration-300"
+            style={{ height: 40, width: 40, top: 25, right: 25 }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
           <div className="container mx-auto p-12">
             <div className="pb-12">
               <motion.div
@@ -40,10 +59,10 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
                 {item.title}
               </motion.div>
               <motion.div
-                layoutId={`work-subtitle-${item.id}`}
+                layoutId={`work-technologies-${item.id}`}
                 className="text-gray-600 italic"
               >
-                {item.subtitle}
+                {item.technologies.join(' / ')}
               </motion.div>
             </div>
 
@@ -65,7 +84,7 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
               initial="hidden"
               animate="visible"
               variants={variants}
-              className="max-w-4xl"
+              className="max-w-4xl mx-auto"
             >
               {item.description}
             </motion.p>

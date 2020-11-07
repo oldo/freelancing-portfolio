@@ -21,7 +21,10 @@
   }
 
   a {
-    @apply font-semibold text-gray-600;
+    @apply font-semibold text-gray-800 border-b-2 border-accent transition-colors duration-300;
+  }
+  a:hover {
+    @apply text-accent;
   }
 
   .overlay {

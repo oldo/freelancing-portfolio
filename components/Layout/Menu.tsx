@@ -1,7 +1,7 @@
 import React from 'react';
 
 import MenuItem from './MenuItem';
-import { Views } from '../../interfaces';
+import { Views } from '../../typescript/enums';
 import { useRouter } from 'next/router';
 
 interface MenuProps {}
