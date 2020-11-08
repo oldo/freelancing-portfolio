@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Item } from './items';
 import variants from '../../lib/variants';
@@ -26,9 +27,8 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
 
       <div className="fixed top-0 left-0 w-screen h-screen z-10 flex pointer-events-none">
         <motion.div
-          layoutId={`work-container-${item.id}`}
           className="relative m-auto bg-white rounded-lg border pointer-events-auto overflow-y-auto hide-scrollbars"
-          style={{ maxHeight: '90vh' }}
+          style={{ maxHeight: '90vh', maxWidth: '90vw' }}
         >
           <div
             onClick={() => router.push('/works')}
@@ -67,15 +67,22 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
 
             <div className="grid grid-cols-2 gap-8 pb-12">
               {item.images.map((image, i) => (
-                <motion.img
+                <motion.div
                   key={`image-${item.id}-${i}`}
                   initial="hidden"
                   animate="visible"
                   variants={variants}
                   layoutId={i === 0 ? `work-image-${item.id}` : undefined}
-                  src={image}
                   className="rounded-lg"
-                />
+                >
+                  <Image
+                    src={image.src}
+                    className="rounded-lg"
+                    height={image.height}
+                    width={image.width}
+                    alt={image.alt}
+                  />
+                </motion.div>
               ))}
             </div>
 
@@ -83,7 +90,7 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
               initial="hidden"
               animate="visible"
               variants={variants}
-              className="max-w-4xl mx-auto"
+              className="max-w-4xl"
             >
               {item.description}
             </motion.p>
