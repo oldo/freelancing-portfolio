@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
-import Hello from '../components/Introduction/Hello';
+import Hello from '../components/Hello/Hello';
 
 interface HomeProps {}
 

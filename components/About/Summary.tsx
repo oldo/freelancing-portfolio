@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HomeIcon from '../Icons/Home';
+import GlobeIcon from '../Icons/Globe';
 import AcademicIcon from '../Icons/Academic';
 import BriefcaseIcon from '../Icons/Briefcase';
 
@@ -11,12 +11,12 @@ const Summary: React.FC<SummaryProps> = ({}) => {
     {
       title: 'Byron Bay, Australia',
       subtitle: 'UTC/GMT+11',
-      icon: HomeIcon,
+      icon: GlobeIcon,
     },
     {
       title:
         '<a href="https://www.usebookex.com" target="_blank" rel="noopener noreferrer">Bookex</a>',
-      subtitle: 'Co-founder and Lead Developer',
+      subtitle: 'Co-founder and CTO/Lead Developer',
       icon: BriefcaseIcon,
     },
     {
@@ -31,7 +31,7 @@ const Summary: React.FC<SummaryProps> = ({}) => {
       icon: AcademicIcon,
     },
     {
-      title: 'Diploma of Marine Engineering',
+      title: 'Advanced Diploma of Marine Engineering',
       subtitle: 'Newcastle TAFE',
       icon: AcademicIcon,
     },

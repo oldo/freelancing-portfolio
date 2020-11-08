@@ -18,9 +18,13 @@ module.exports = {
     },
     inset: {
       ...defaultTheme.inset,
-      '1/2': '50%'
+      '1/2': '50%',
     },
     extend: {
+      fontSize: {
+        '7xl': '5rem',
+        '8xl': '6rem',
+      },
       colors: {
         primary: {
           500: '#a2b8cd',

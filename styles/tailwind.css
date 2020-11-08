@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-gray-700 text-base font-semibold;
+    @apply text-gray-700 text-lg font-semibold;
   }
   @screen lg {
     body {

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import Face from '../Layout/Face';
+import Face from './Face';
 import Heading from './Heading';
 import Subheading from './Subheading';
 
@@ -10,8 +10,7 @@ const Landing: React.FC<LandingProps> = ({}) => {
   return (
     <motion.div className="h-screen flex flex-col justify-center container mx-auto">
       <div
-        className="leading-tight pb-12 font-black text-gray-800"
-        style={{ fontSize: '6rem' }}
+        className="leading-tight pb-12 font-black text-gray-800 text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
       >
         <Heading />
       </div>
