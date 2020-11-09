@@ -9,9 +9,7 @@ interface LandingProps {}
 const Landing: React.FC<LandingProps> = ({}) => {
   return (
     <motion.div className="h-screen flex flex-col justify-center container mx-auto">
-      <div
-        className="leading-tight pb-12 font-black text-gray-800 text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
-      >
+      <div className="leading-tight pb-12 font-black text-gray-800 text-4xl sm:text-6xl md:text-7xl lg:text-8xl">
         <Heading />
       </div>
 
