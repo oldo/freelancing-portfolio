@@ -4,9 +4,11 @@ import { useRouter } from 'next/router';
 import MenuItem from './MenuItem';
 import { Views } from '../../typescript/enums';
 
-interface MenuProps {}
+interface MenuProps {
+  isMobile: boolean;
+}
 
-const Menu: React.FC<MenuProps> = ({}) => {
+const Menu: React.FC<MenuProps> = ({ isMobile }) => {
   const router = useRouter();
   const activeView = router.pathname;
 
@@ -26,9 +28,9 @@ const Menu: React.FC<MenuProps> = ({}) => {
     {
       path: Views.CONTACT,
       label: 'Contact',
-      externalLink: 'mailto:oldo.nicho@gmail.com'
+      externalLink: 'mailto:oldo.nicho@gmail.com',
     },
-  ];
+  ].filter((item) => (isMobile ? item.path !== Views.ABOUT : true));
 
   return (
     <div className={`absolute top-0 w-full mb-8 flex flew-row justify-center`}>

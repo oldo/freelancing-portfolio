@@ -2,11 +2,13 @@ import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import Works from '../../components/Works/Works';
 
-interface WorksContainerProps {}
+interface WorksContainerProps {
+  isMobile: boolean;
+}
 
-const WorksContainer: React.FC<WorksContainerProps> = ({}) => {
+const WorksContainer: React.FC<WorksContainerProps> = ({ isMobile }) => {
   return (
-    <Layout>
+    <Layout isMobile={isMobile}>
       <Works />
     </Layout>
   );

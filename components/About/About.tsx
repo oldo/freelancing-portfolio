@@ -5,12 +5,22 @@ import Summary from './Summary';
 import Face from './Face';
 import variants from '../../lib/variants';
 import AboutData from './about.mdx';
+import Image from 'next/image';
 
 interface AboutProps {}
 
 const About: React.FC<AboutProps> = ({}) => {
   return (
-    <div className="container mx-auto pt-24 md:pt-32 pb-24">
+    <>
+      <div className="sm:hidden w-2/4 mx-auto rounded-full border-4 border-gray-700 mb-8">
+        <Image
+          className="rounded-full"
+          src="/ollie-large.png"
+          height={1200}
+          width={1200}
+        />
+      </div>
+      
       <div className="pb-12">
         <Subheading />
       </div>
@@ -23,7 +33,7 @@ const About: React.FC<AboutProps> = ({}) => {
       </motion.div>
 
       <Face />
-    </div>
+    </>
   );
 };
 

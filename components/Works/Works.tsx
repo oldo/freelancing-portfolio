@@ -15,9 +15,7 @@ const Works: React.FC<WorksProps> = ({}) => {
 
   return (
     <>
-      <motion.div
-        className="container mx-auto pt-24 md:pt-32 pb-8 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 hide-scrollbars"
-      >
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 hide-scrollbars">
         {items.map((item) => (
           <Work key={`item-${item.id}`} item={item} />
         ))}
