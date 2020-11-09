@@ -30,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({
 
       <style jsx>{`
         .bg-pattern {
-          ${whiteDotGrid()}
+          ${!isMobile ? whiteDotGrid() : ''}
         }
       `}</style>
     </>
