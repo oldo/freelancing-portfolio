@@ -12,7 +12,7 @@ interface AboutProps {}
 const About: React.FC<AboutProps> = ({}) => {
   return (
     <>
-      <div className="sm:hidden w-2/4 mx-auto rounded-full border-4 border-gray-700 mb-8">
+      <div className="sm:hidden w-2/4 mx-auto rounded-full bg-white border-4 border-gray-700 mb-8">
         <Image
           className="rounded-full"
           src="/ollie-large.png"
