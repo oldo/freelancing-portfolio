@@ -33,7 +33,7 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
           <div
             onClick={() => router.push('/works')}
             className="absolute cursor-pointer text-gray-500 hover:text-gray-700 transition-color duration-300"
-            style={{ height: 40, width: 40, top: 25, right: 25 }}
+            style={{ height: 30, width: 30, top: 15, right: 15 }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -49,11 +49,11 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
               />
             </svg>
           </div>
-          <div className="container mx-auto p-12">
+          <div className="container mx-auto p-4 sm:p-8 lg:p-12">
             <div className="pb-12">
               <motion.div
                 layoutId={`work-title-${item.id}`}
-                className="font-black text-2xl"
+                className="font-black text-2xl w-11/12"
               >
                 {item.title}
               </motion.div>
@@ -65,7 +65,7 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
               </motion.div>
             </div>
 
-            <div className="grid grid-cols-2 gap-8 pb-12">
+            <div className="grid gris-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 pb-12">
               {item.images.map((image, i) => (
                 <motion.div
                   key={`image-${item.id}-${i}`}
@@ -90,15 +90,13 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
               initial="hidden"
               animate="visible"
               variants={variants}
-              className="max-w-4xl"
+              className="max-w-4xl text-gray-600"
             >
               {item.description}
             </motion.p>
           </div>
         </motion.div>
       </div>
-
-      <style jsx>{``}</style>
     </>
   );
 };
