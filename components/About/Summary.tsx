@@ -1,13 +1,37 @@
 import React from 'react';
 
+import HeartIcon from '../Icons/Heart';
 import GlobeIcon from '../Icons/Globe';
 import AcademicIcon from '../Icons/Academic';
-import BriefcaseIcon from '../Icons/Briefcase';
+import StarIcon from '../Icons/Star';
+import { Technologies } from '../../typescript/enums';
 
 interface SummaryProps {}
 
 const Summary: React.FC<SummaryProps> = ({}) => {
   const rows = [
+    {
+      title: [
+        Technologies.REACT,
+        Technologies.REACT_NATIVE,
+        Technologies.TS,
+        Technologies.NEXTJS,
+        Technologies.GRAPHQL,
+        Technologies.APOLLO,
+      ].join(' / '),
+      subtitle: 'Frontend - my first love!',
+      icon: HeartIcon,
+    },
+    {
+      title: [
+        Technologies.NODE,
+        Technologies.SERVERLESS,
+        Technologies.HASURA,
+        Technologies.LARAVEL,
+      ].join(' / '),
+      subtitle: 'Backend - competent and improving :-)',
+      icon: HeartIcon,
+    },
     {
       title: 'Byron Bay, Australia',
       subtitle: 'UTC/GMT+11',
@@ -17,13 +41,13 @@ const Summary: React.FC<SummaryProps> = ({}) => {
       title:
         '<a href="https://www.usebookex.com" target="_blank" rel="noopener noreferrer">Bookex</a>',
       subtitle: 'Co-founder and CTO/Lead Developer',
-      icon: BriefcaseIcon,
+      icon: StarIcon,
     },
     {
       title:
         '<a href="https://www.bookinglayer.com" target="_blank" rel="noopener noreferrer">Bookinglayer</a>',
       subtitle: 'CTO and Developer',
-      icon: BriefcaseIcon,
+      icon: StarIcon,
     },
     {
       title: 'Bachelor of Mechanical Engineering (First Class Honours)',
