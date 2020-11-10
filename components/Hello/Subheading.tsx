@@ -11,15 +11,15 @@ const Subheading: React.FC<SubheadingProps> = ({}) => {
       initial="hidden"
       animate="visible"
       variants={variants}
-      className="text-2xl font-extrabold"
+      className="text-2xl font-extrabold lg:w-3/4"
     >
       <div className="pb-8 sm:pb-2">
         My name is Ollie. I’m a <strong>React & React Native developer</strong>{' '}
         with <strong>backend skills.</strong>
       </div>
       <div>
-        I have a passion for creating <strong>clean, efficient UI</strong> that
-        look <strong>pixel perfect on all devices.</strong>
+        My passion is creating <strong>clean, efficient apps</strong> that look{' '}
+        <strong>pixel perfect on all devices.</strong>
       </div>
 
       <style jsx>{`

@@ -18,8 +18,8 @@ const Subheading: React.FC<SubheadingProps> = ({}) => {
         with <strong>backend skills.</strong>
       </div>
       <div>
-        I have a passion for creating <strong>clean, efficient UI</strong> that
-        look <strong>pixel perfect on all devices.</strong>
+        My passion is creating <strong>clean, efficient apps</strong> that look{' '}
+        <strong>pixel perfect on all devices.</strong>
       </div>
 
       <style jsx>{`
