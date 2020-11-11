@@ -15,9 +15,12 @@ export enum Technologies {
   MATERIAL_UI = 'Material-UI',
   GRAPHQL = 'GraphQL',
   APOLLO = 'Apollo Client',
+  FORMIK = 'Formik',
 
   NODE = 'Node.js',
   HASURA = 'Hasura',
   LARAVEL = 'Laravel',
   SERVERLESS = 'Serverless',
+
+  STRIPE = 'Stripe',
 }

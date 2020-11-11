@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import { items } from './items';
 import Work from './Work';
-import SelectedWork from './SelectedWork';
+import SelectedWork from './SelectedWork/SelectedWork';
 
 interface WorksProps {}
 

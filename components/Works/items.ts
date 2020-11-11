@@ -27,20 +27,27 @@ const images = [
   },
 ];
 
+const video = {
+  type: 'video',
+  src: '/works/test/test-movie1.mp4',
+};
+
 export const items = [
   {
     id: 'booking-engine',
     title: 'Booking Engine',
-    images: [images[0], images[1], images[2], images[3]],
+    images: [images[0], video, images[1], images[2], images[3]],
     description: `
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+A frontoffice booking tool to allow accommodation providers to accept direct bookings for their inventory.<br />
 
-Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur.
+The customer enters their search criteria, and available options are shown in both a list and map view. A detail view shows further information about the listing and then guest information can be collected and payment made via a Stripe integration.
     `,
     technologies: [
       Technologies.REACT,
       Technologies.TS,
       Technologies.MATERIAL_UI,
+      Technologies.FORMIK,
+      Technologies.STRIPE,
     ],
   },
   {
@@ -90,15 +97,19 @@ Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metu
   },
 ];
 
+export interface Image {
+  type: 'image' | 'video';
+  src: string;
+  alt: string;
+  height: number;
+  width: number;
+  caption?: string;
+}
+
 export interface Item {
   id: string;
   title: string;
   description: string;
-  images: {
-    src: string;
-    alt: string;
-    height: number;
-    width: number;
-  }[];
+  images: Image[];
   technologies: Technologies[];
 }

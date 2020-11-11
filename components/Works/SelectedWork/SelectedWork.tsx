@@ -1,9 +1,10 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Item } from './items';
-import variants from '../../lib/variants';
+import { Item } from '../items';
+import Image from './Image';
+import Video from './Video';
+import variants from '../../../lib/variants';
 
 interface SelectedWorkProps {
   item: Item;
@@ -59,10 +60,17 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
               </motion.div>
               <motion.div
                 layoutId={`work-technologies-${item.id}`}
-                className="text-gray-600 italic"
+                className="text-gray-600 italic pb-12"
               >
                 {item.technologies.join(' / ')}
               </motion.div>
+              <motion.p
+                initial="hidden"
+                animate="visible"
+                variants={variants}
+                className="text-gray-600"
+                dangerouslySetInnerHTML={{ __html: item.description }}
+              />
             </div>
 
             <div className="grid gris-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 pb-12">
@@ -75,25 +83,10 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
                   layoutId={i === 0 ? `work-image-${item.id}` : undefined}
                   className="rounded-lg"
                 >
-                  <Image
-                    src={image.src}
-                    className="rounded-lg"
-                    height={image.height}
-                    width={image.width}
-                    alt={image.alt}
-                  />
+                  {image.type === 'video' ? <Video video={image} /> : <Image image={image} />}
                 </motion.div>
               ))}
             </div>
-
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              className="max-w-4xl text-gray-600"
-            >
-              {item.description}
-            </motion.p>
           </div>
         </motion.div>
       </div>

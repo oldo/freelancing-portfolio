@@ -19,6 +19,7 @@ module.exports = {
     inset: {
       ...defaultTheme.inset,
       '1/2': '50%',
+      '-1/2': '-50%',
     },
     extend: {
       fontSize: {
