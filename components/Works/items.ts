@@ -2,41 +2,52 @@ import { Technologies } from '../../typescript/enums';
 
 const images = [
   {
+    type: 'image',
     src: '/temp/unsplash-1.jpg',
     width: 4608,
     height: 3072,
     alt: 'image 1',
+    caption: 'test',
   },
   {
+    type: 'image',
     src: '/temp/unsplash-2.jpg',
     width: 5184,
     height: 3456,
     alt: 'image 2',
+    caption: 'test',
   },
   {
+    type: 'image',
     src: '/temp/unsplash-3.jpg',
     width: 5472,
     height: 3648,
     alt: 'image 3',
+    caption: 'test',
   },
   {
+    type: 'image',
     src: '/temp/unsplash-4.jpg',
     width: 5438,
     height: 3625,
     alt: 'image 4',
+    caption: 'test',
+  },
+  {
+    type: 'video',
+    src: '/works/test/test-movie1.mp4',
+    width: 5438,
+    height: 3625,
+    alt: 'image 4',
+    caption: 'test',
   },
 ];
-
-const video = {
-  type: 'video',
-  src: '/works/test/test-movie1.mp4',
-};
 
 export const items = [
   {
     id: 'booking-engine',
     title: 'Booking Engine',
-    images: [images[0], video, images[1], images[2], images[3]],
+    images: [images[0], images[4], images[1], images[2], images[3]],
     description: `
 A frontoffice booking tool to allow accommodation providers to accept direct bookings for their inventory.<br />
 
@@ -98,7 +109,7 @@ Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metu
 ];
 
 export interface Image {
-  type: 'image' | 'video';
+  type: string;
   src: string;
   alt: string;
   height: number;
