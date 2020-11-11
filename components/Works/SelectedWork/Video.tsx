@@ -7,14 +7,13 @@ interface SelectedWorkVideoProps {
 
 const SelectedWorkVideo: React.FC<SelectedWorkVideoProps> = ({ video }) => {
   return (
-    <div className="w-full h-full rounded-lg relative overflow-hidden" style={{ minHeight: 300 }}>
+    <div className="w-full h-full rounded-lg relative overflow-hidden bg-gray-200" style={{ minHeight: 300 }}>
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="min-w-full min-h-full h-full w-full absolute top-1/2 left-1/2 object-cover"
-        style={{ transform: 'translateX(-50%) translateY(-50%)' }}
+        className="min-w-full min-h-full h-full w-full absolute"
       >
         <source src={video.src} type="video/mp4" />
       </video>
