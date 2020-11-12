@@ -1,48 +1,5 @@
 import { Technologies } from '../../typescript/enums';
 
-const images = [
-  {
-    type: 'image',
-    src: '/temp/unsplash-1.jpg',
-    width: 4608,
-    height: 3072,
-    alt: 'image 1',
-    caption: 'test',
-  },
-  {
-    type: 'image',
-    src: '/temp/unsplash-2.jpg',
-    width: 5184,
-    height: 3456,
-    alt: 'image 2',
-    caption: 'test',
-  },
-  {
-    type: 'image',
-    src: '/temp/unsplash-3.jpg',
-    width: 5472,
-    height: 3648,
-    alt: 'image 3',
-    caption: 'test',
-  },
-  {
-    type: 'image',
-    src: '/temp/unsplash-4.jpg',
-    width: 5438,
-    height: 3625,
-    alt: 'image 4',
-    caption: 'test',
-  },
-  {
-    type: 'video',
-    src: '/works/test/test-movie1.mp4',
-    width: 5438,
-    height: 3625,
-    alt: 'image 4',
-    caption: 'test',
-  },
-];
-
 export const items = [
   {
     id: 'reservation-calendar',
