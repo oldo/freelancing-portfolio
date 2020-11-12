@@ -16,6 +16,10 @@
     @apply leading-loose pb-4;
   }
 
+  p a {
+    @apply font-semibold text-gray-800 border-b-2 border-accent transition-colors duration-300;
+  }
+
   strong {
     @apply text-gray-800;
   }

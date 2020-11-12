@@ -11,6 +11,7 @@ const SelectedWorkImage: React.FC<SelectedWorkImageProps> = ({ image }) => {
     <Image
       src={image.src}
       className="rounded-lg"
+      style={{ maxHeight: 400 }}
       height={image.height}
       width={image.width}
       alt={image.alt}

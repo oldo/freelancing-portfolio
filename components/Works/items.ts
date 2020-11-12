@@ -45,14 +45,80 @@ const images = [
 
 export const items = [
   {
+    id: 'reservation-calendar',
+    title: 'Reservation Management Calendar',
+    images: [
+      {
+        src: '/works/calendar-1.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Calendar 1',
+      },
+      {
+        src: '/works/calendar-2.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Calendar 2',
+      },
+      {
+        src: '/works/calendar-3.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Calendar 3',
+      },
+    ],
+    technologies: [
+      Technologies.REACT,
+      Technologies.JS,
+      Technologies.STYLED_COMPONENTS,
+      Technologies.REACT_VIRTUALIZED,
+    ],
+    description: [
+      `A calendar component for making and managing bookings.`,
+      `Bookings can be edited by dragging and dropping into different rooms and by extending length to extend duration of stay.`,
+      `Calendar grid is 'virtualized' so that only what is in view is rendered at any time. This allows for extremely massive inventories on an infinite timescale to be displayed in a single view without running into performance issues.`,
+    ],
+  },
+  {
     id: 'booking-engine',
     title: 'Booking Engine',
-    images: [images[0], images[4], images[1], images[2], images[3]],
-    description: `
-A frontoffice booking tool to allow accommodation providers to accept direct bookings for their inventory.<br />
-
-The customer enters their search criteria, and available options are shown in both a list and map view. A detail view shows further information about the listing and then guest information can be collected and payment made via a Stripe integration.
-    `,
+    images: [
+      {
+        src: '/works/booking-engine-1.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Booking Engine 1',
+      },
+      {
+        src: '/works/booking-engine-2.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Booking Engine 2',
+      },
+      {
+        src: '/works/booking-engine-3.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Booking Engine 3',
+      },
+      {
+        src: '/works/booking-engine-4.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Booking Engine 4',
+      },
+    ],
+    description: [
+      `A frontoffice booking tool to allow accommodation providers to accept direct bookings for their inventory.`,
+      `The customer enters their search criteria, and available options are shown in both a list and map view. A detail view shows further information about the listing and then guest information can be collected and payment made via a Stripe integration.`,
+    ],
     technologies: [
       Technologies.REACT,
       Technologies.TS,
@@ -62,49 +128,130 @@ The customer enters their search criteria, and available options are shown in bo
     ],
   },
   {
-    id: 'item-2',
-    title: 'Parturient Pellentesque Malesuada',
-    images: [images[1], images[0], images[2], images[3]],
-    technologies: [
-      Technologies.REACT,
-      Technologies.TS,
-      Technologies.MATERIAL_UI,
+    id: 'bookex-mobile-app',
+    title: 'Bookex Business Mobile App',
+    images: [
+      {
+        src: '/works/business-app-1.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Business App 1',
+      },
+      {
+        src: '/works/business-app-2.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Business App 2',
+      },
+      {
+        src: '/works/business-app-3.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Business App 3',
+      },
     ],
-    description: `
-Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor.
-    `,
+    technologies: [
+      Technologies.REACT_NATIVE,
+      Technologies.TS,
+      Technologies.REACT_NATIVE_PAPER,
+    ],
+    description: [
+      `A mobile application to allow Bookex clients to manage their reservations and housekeeping tasks when on the move.`,
+    ],
   },
   {
-    id: 'item-3',
-    title: 'Elit Cras',
-    images: [images[2], images[0], images[1], images[3]],
-    technologies: [
-      Technologies.REACT,
-      Technologies.TS,
-      Technologies.MATERIAL_UI,
+    id: 'bookinglayer-frontoffice',
+    title: 'Bookinglayer Frontoffice',
+    images: [
+      {
+        src: '/works/BL-FO-1.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Bookinglayer Frontoffice 1',
+      },
+      {
+        src: '/works/BL-FO-2.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Bookinglayer Frontoffice 2',
+      },
+      {
+        src: '/works/BL-FO-3.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Bookinglayer Frontoffice 3',
+      },
+      {
+        src: '/works/BL-FO-4.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Bookinglayer Frontoffice 4',
+      },
+      {
+        src: '/works/BL-FO-5.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Bookinglayer Frontoffice 5',
+      },
     ],
-    description: `
-Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo.
-
-Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum.
-    `,
+    technologies: [Technologies.REACT, Technologies.JS, Technologies.BOOTSTRAP],
+    description: [
+      `A frontoffice booking interface for reservation of package based holidays for surf camps.`,
+      `Of particular interest is the package configurator which allows guests to specify exactly when in their stay they would like surf lessons, gear rental, excursions, etc.`,
+      `Relevant items can also be shown and upsold to the customer depending on the products that they have in their cart.`,
+    ],
   },
   {
-    id: 'item-4',
-    title: 'Ipsum Vestibulum Aenean',
-    images: [images[3], images[0], images[1], images[2]],
-    technologies: [
-      Technologies.REACT,
-      Technologies.TS,
-      Technologies.MATERIAL_UI,
+    id: 'public-api',
+    title: 'Public API Schema Design & Documentation Site',
+    images: [
+      {
+        src: '/works/public-api-1.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Bookex Public API 1',
+      },
+      {
+        src: '/works/public-api-2.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Bookex Public API 2',
+      }
     ],
-    description: `
-Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-    `,
+    technologies: [Technologies.API, Technologies.LARAVEL],
+    description: [
+      `Schema design and <a href="https://developers.bookex.io/" target="_blank" rel="noopener noreferrer">API documentation</a> for Bookex's public API, allowing clients to create their own custom booking experience.`,
+    ],
+  },
+  {
+    id: 'my-portfolio',
+    title: 'This Portfolio site!',
+    images: [{
+      src: '/works/portfolio-1.jpg',
+      type: 'image',
+      width: 2880,
+      height: 1800,
+      alt: 'Portfolio 1',
+    }],
+    technologies: [
+      Technologies.TS,
+      Technologies.NEXTJS,
+      Technologies.TAILWIND,
+      Technologies.FRAMER,
+    ],
+    description: [
+      `This portfolio website. <a href="https://github.com/oldo/freelancing-portfolio" target="_blank" rel="noopener noreferrer">Checkout the code</a> 🤓`,
+    ],
   },
 ];
 
@@ -120,7 +267,7 @@ export interface Image {
 export interface Item {
   id: string;
   title: string;
-  description: string;
+  description: string[];
   images: Image[];
   technologies: Technologies[];
 }

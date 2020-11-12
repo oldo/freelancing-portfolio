@@ -64,13 +64,16 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
               >
                 {item.technologies.join(' / ')}
               </motion.div>
-              <motion.p
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                className="text-gray-600"
-                dangerouslySetInnerHTML={{ __html: item.description }}
-              />
+              {item.description.map((d, i) => (
+                <motion.p
+                  key={`description-${item.id}-${i}`}
+                  initial="hidden"
+                  animate="visible"
+                  variants={variants}
+                  className="text-gray-600"
+                  dangerouslySetInnerHTML={{ __html: d }}
+                />
+              ))}
             </div>
 
             <div className="grid gris-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 pb-12">
@@ -81,9 +84,14 @@ const SelectedWork: React.FC<SelectedWorkProps> = ({ item }) => {
                   animate="visible"
                   variants={variants}
                   layoutId={i === 0 ? `work-image-${item.id}` : undefined}
-                  className="rounded-lg"
+                  className="rounded-lg border border-gray-300"
+                  style={{ maxHeight: 400 }}
                 >
-                  {image.type === 'video' ? <Video video={image} /> : <Image image={image} />}
+                  {image.type === 'video' ? (
+                    <Video video={image} />
+                  ) : (
+                    <Image image={image} />
+                  )}
                 </motion.div>
               ))}
             </div>
