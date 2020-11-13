@@ -28,7 +28,7 @@ const Menu: React.FC<MenuProps> = ({ isMobile }) => {
     {
       path: Views.CONTACT,
       label: 'Contact',
-      externalLink: 'mailto:oldo.nicho@gmail.com',
+      externalLink: true,
     },
   ].filter((item) => (isMobile ? item.path !== Views.ABOUT : true));
 

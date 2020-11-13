@@ -11,7 +11,7 @@ const Subheading: React.FC<SubheadingProps> = ({}) => {
       initial="hidden"
       animate="visible"
       variants={variants}
-      className="text-2xl font-extrabold lg:w-3/4"
+      className="text-xl sm:text-2xl font-extrabold"
     >
       <div className="pb-8 sm:pb-2">
         My name is Ollie. I’m a <strong>React & React Native developer</strong>{' '}

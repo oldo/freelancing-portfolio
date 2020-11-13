@@ -17,7 +17,6 @@ const Summary: React.FC<SummaryProps> = ({}) => {
         Technologies.TS,
         Technologies.NEXTJS,
         Technologies.GRAPHQL,
-        Technologies.APOLLO,
       ].join(' / '),
       subtitle: 'Frontend - my first love!',
       icon: HeartIcon,
@@ -29,7 +28,7 @@ const Summary: React.FC<SummaryProps> = ({}) => {
         Technologies.HASURA,
         Technologies.LARAVEL,
       ].join(' / '),
-      subtitle: 'Backend - competent and improving :-)',
+      subtitle: 'Backend - competent and improving',
       icon: HeartIcon,
     },
     {

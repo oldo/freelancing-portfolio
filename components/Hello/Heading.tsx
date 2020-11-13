@@ -29,7 +29,7 @@ const Heading: React.FC<HeadingProps> = ({}) => {
         animate="visible"
         layoutId="heading4"
       >
-        PIXEL PERFECT
+        PIXEL PERFECT UI
       </motion.div>
     </>
   );

@@ -5,11 +5,13 @@ import Menu from './Menu';
 import Head from './Head';
 
 interface LayoutProps {
+  title: string;
   isMobile: boolean;
   isScreenHeight?: boolean;
 }
 
 const Layout: React.FC<LayoutProps> = ({
+  title,
   isMobile,
   isScreenHeight = false,
   children,
@@ -21,7 +23,7 @@ const Layout: React.FC<LayoutProps> = ({
 
   return (
     <>
-      <Head />
+      <Head title={title} />
 
       <div className="bg-pattern min-h-screen w-full overflow-hidden">
         <Menu isMobile={isMobile} />

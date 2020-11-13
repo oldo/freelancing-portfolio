@@ -9,11 +9,11 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({ isMobile }) => {
   return isMobile ? (
-    <Layout isMobile={isMobile}>
+    <Layout title="Hello" isMobile={isMobile}>
       <About />
     </Layout>
   ) : (
-    <Layout isMobile={isMobile} isScreenHeight>
+    <Layout title="Hello" isMobile={isMobile} isScreenHeight>
       <Hello />
     </Layout>
   );

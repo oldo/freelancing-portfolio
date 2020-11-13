@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Subheading from './Subheading';
+import Subheading from '../Hello/Subheading';
 import Summary from './Summary';
 import Face from './Face';
 import variants from '../../lib/variants';
@@ -21,7 +21,7 @@ const About: React.FC<AboutProps> = ({}) => {
         />
       </div>
       
-      <div className="pb-12">
+      <div className="max-w-4xl pb-12">
         <Subheading />
       </div>
 

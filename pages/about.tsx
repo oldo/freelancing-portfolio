@@ -8,7 +8,7 @@ interface AboutContainerProps {
 
 const AboutContainer: React.FC<AboutContainerProps> = ({ isMobile }) => {
   return (
-    <Layout isMobile={isMobile}>
+    <Layout title="About" isMobile={isMobile}>
       <About />
     </Layout>
   );

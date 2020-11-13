@@ -8,7 +8,7 @@ interface WorksContainerProps {
 
 const WorksContainer: React.FC<WorksContainerProps> = ({ isMobile }) => {
   return (
-    <Layout isMobile={isMobile}>
+    <Layout title="Works" isMobile={isMobile}>
       <Works />
     </Layout>
   );
