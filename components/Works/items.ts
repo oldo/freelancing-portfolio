@@ -74,7 +74,7 @@ export const items = [
     ],
     description: [
       `A frontoffice booking tool to allow accommodation providers to accept direct bookings for their inventory.`,
-      `The customer enters their search criteria, and available options are shown in both a list and map view. A detail view shows further information about the listing and then guest information can be collected and payment made via a Stripe integration.`,
+      `The customer enters their search criteria, and available options are shown in both a list and map view. A detail view shows further information about the listing and then guest information can be collected. The payment is made via a Stripe integration.`,
     ],
     technologies: [
       Technologies.REACT,

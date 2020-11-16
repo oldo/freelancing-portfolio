@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Ollie Nicholson',
-  description: '',
+  description: 'My name is Ollie. I’m a React & React Native developer with backend skills. My passion is creating clean, efficient apps that look pixel perfect on all devices.',
   author: 'Ollie Nicholson',
-  // url: 'https://www.the-birth-library.org',
+  url: 'https://ollie.nicho.tech',
   locale: 'en',
   fonts: [
     'https://fonts.googleapis.com/css2?family=Biryani&display=swap',
