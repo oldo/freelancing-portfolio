@@ -34,14 +34,15 @@ const Menu: React.FC<MenuProps> = ({ isMobile }) => {
 
   return (
     <div className={`absolute top-0 w-full mb-8 flex flew-row justify-center`}>
-      {items.map(({ path, label }) => (
-        <MenuItem
-          key={path}
-          path={path}
-          label={label}
-          isActive={activeView === path}
-        />
-      ))}
+      {items.map(({ path, label }) => {
+        let isActive = activeView === path;
+        if (isMobile && path === Views.HOME && activeView === Views.ABOUT)
+          isActive = true;
+
+        return (
+          <MenuItem key={path} path={path} label={label} isActive={isActive} />
+        );
+      })}
     </div>
   );
 };
