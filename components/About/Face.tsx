@@ -19,10 +19,16 @@ const Face: React.FC<FaceProps> = () => {
       variants={variants}
       initial="hidden"
       animate="opaque"
-      className={`fixed bottom-0 hidden lg:block`}
+      className={`fixed bottom-0 hidden lg:block pointer-events-none`}
       style={style}
     >
-      <Image src="/ollie-large.png" alt="Ollie" layout="fill" priority />
+      <Image
+        className="pointer-events-none"
+        src="/ollie-large.png"
+        alt="Ollie"
+        layout="fill"
+        priority
+      />
     </motion.div>
   );
 };
