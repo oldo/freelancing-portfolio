@@ -44,11 +44,9 @@ const Head: React.FC<HeadProps> = ({ title }) => {
         title={title}
         titleTemplate={`%s | ${config.title}`}
         description={config.description}
-        canonical={config.url}
         openGraph={{
           type: 'website',
           locale: 'en',
-          url: config.url,
           images: [
             {
               url: `${config.url}/og-image.jpg`,
