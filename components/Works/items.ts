@@ -36,7 +36,7 @@ export const items = [
     description: [
       `A calendar component for making and managing bookings.`,
       `Bookings can be edited by dragging and dropping into different rooms and by extending length to extend duration of stay.`,
-      `Calendar grid is 'virtualized' so that only what is in view is rendered at any time. This allows for extremely massive inventories on an infinite timescale to be displayed in a single view without running into performance issues.`,
+      `The calendar grid is 'virtualized' so that only what is in view is rendered at any time. This allows for extremely massive inventories on an infinite timescale to be displayed in a single view without running into performance issues.`,
     ],
   },
   {
