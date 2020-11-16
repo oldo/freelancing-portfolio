@@ -47,7 +47,7 @@ const Head: React.FC<HeadProps> = ({ title }) => {
         canonical={config.url}
         openGraph={{
           type: 'website',
-          locale: 'en_AU',
+          locale: 'en',
           url: config.url,
           images: [
             {
