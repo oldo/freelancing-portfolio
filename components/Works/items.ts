@@ -169,7 +169,7 @@ export const items = [
       Technologies.BOOTSTRAP,
     ],
     description: [
-      `A frontoffice booking interface for reservation of package based holidays for surf camps.`,
+      `A frontoffice booking interface for reservation of package-based holidays for surf camps.`,
       `Of particular interest is the package configurator which allows guests to specify exactly when in their stay they would like surf lessons, gear rental, excursions, etc.`,
       `Relevant items can also be shown and upsold to the customer depending on the products that they have in their cart.`,
     ],
