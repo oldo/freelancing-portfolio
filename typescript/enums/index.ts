@@ -10,6 +10,7 @@ export enum Technologies {
   REACT_NATIVE = 'React Native',
   TS = 'TypeScript',
   JS = 'JS ES6+',
+  REDUX = 'Redux',
   NEXTJS = 'Next.js',
   GATSBY = 'Gatsby',
   MATERIAL_UI = 'Material-UI',

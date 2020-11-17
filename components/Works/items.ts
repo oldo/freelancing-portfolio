@@ -30,6 +30,7 @@ export const items = [
     technologies: [
       Technologies.REACT,
       Technologies.JS,
+      Technologies.REDUX,
       Technologies.STYLED_COMPONENTS,
       Technologies.REACT_VIRTUALIZED,
     ],
@@ -79,6 +80,7 @@ export const items = [
     technologies: [
       Technologies.REACT,
       Technologies.TS,
+      Technologies.REDUX,
       Technologies.MATERIAL_UI,
       Technologies.FORMIK,
       Technologies.STRIPE,
@@ -113,6 +115,7 @@ export const items = [
     technologies: [
       Technologies.REACT_NATIVE,
       Technologies.TS,
+      Technologies.REDUX,
       Technologies.REACT_NATIVE_PAPER,
     ],
     description: [
@@ -159,7 +162,12 @@ export const items = [
         alt: 'Bookinglayer Frontoffice 5',
       },
     ],
-    technologies: [Technologies.REACT, Technologies.JS, Technologies.BOOTSTRAP],
+    technologies: [
+      Technologies.REACT,
+      Technologies.JS,
+      Technologies.REDUX,
+      Technologies.BOOTSTRAP,
+    ],
     description: [
       `A frontoffice booking interface for reservation of package based holidays for surf camps.`,
       `Of particular interest is the package configurator which allows guests to specify exactly when in their stay they would like surf lessons, gear rental, excursions, etc.`,
@@ -183,7 +191,7 @@ export const items = [
         width: 2880,
         height: 1800,
         alt: 'Bookex Public API 2',
-      }
+      },
     ],
     technologies: [Technologies.API, Technologies.LARAVEL],
     description: [
@@ -193,13 +201,15 @@ export const items = [
   {
     id: 'my-portfolio',
     title: 'This Portfolio site!',
-    images: [{
-      src: '/works/portfolio-1.jpg',
-      type: 'image',
-      width: 2880,
-      height: 1800,
-      alt: 'Portfolio 1',
-    }],
+    images: [
+      {
+        src: '/works/portfolio-1.jpg',
+        type: 'image',
+        width: 2880,
+        height: 1800,
+        alt: 'Portfolio 1',
+      },
+    ],
     technologies: [
       Technologies.TS,
       Technologies.NEXTJS,

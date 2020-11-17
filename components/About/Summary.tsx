@@ -17,6 +17,7 @@ const Summary: React.FC<SummaryProps> = ({}) => {
         Technologies.TS,
         Technologies.NEXTJS,
         Technologies.GRAPHQL,
+        Technologies.REDUX,
       ].join(' / '),
       subtitle: 'Frontend - my first love!',
       icon: HeartIcon,
