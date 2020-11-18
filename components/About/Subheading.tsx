@@ -14,7 +14,7 @@ const Subheading: React.FC<SubheadingProps> = ({}) => {
       className="leading-loose"
     >
       <div className="pb-2">
-        My name is Oliver. I’m a <strong>React & React Native developer</strong>{' '}
+        My name is Ollie. I’m a <strong>React & React Native developer</strong>{' '}
         with <strong>backend skills.</strong>
       </div>
       <div>

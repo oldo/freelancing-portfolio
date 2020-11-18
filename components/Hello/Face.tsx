@@ -25,7 +25,7 @@ const Face: React.FC<FaceProps> = () => {
       <Image
         className="pointer-events-none"
         src="/ollie-large.png"
-        alt="Oliver"
+        alt="Ollie"
         layout="fill"
         priority
       />

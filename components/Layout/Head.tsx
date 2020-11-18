@@ -52,7 +52,7 @@ const Head: React.FC<HeadProps> = ({ title }) => {
               url: `${config.url}/og-image.jpg`,
               width: 1200,
               height: 630,
-              alt: 'Oliver Nicholson',
+              alt: 'Ollie Nicholson',
             },
           ],
         }}
